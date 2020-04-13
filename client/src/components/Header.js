@@ -13,7 +13,7 @@ export class Header extends Component {
             >
               CovidCount
             </a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <ul id="nav-mobile" className="right ">
               <li>
                 <a
                   href="https://github.com/rishabhkanojiya?tab=repositories"
