@@ -11,7 +11,9 @@ const corsOptions = {
   credentials: true
 };
 
+// app.use(cors());
 app.use(cors(corsOptions));
+
 app.use(
   "/graphql",
   expressGraphql({

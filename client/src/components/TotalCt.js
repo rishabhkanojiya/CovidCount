@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 export class TotalCt extends Component {
   renderValue = data => {
+    if (!data.cvMainData) {
+      return null;
+    }
     const {
       state,
       confirmed,
