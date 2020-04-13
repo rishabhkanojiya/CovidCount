@@ -4,12 +4,18 @@ import TimeView from "./TimeView";
 import DistTable from "./DistTable";
 
 export class Table extends Component {
-  state = { data: {}, load: false, size: { chart: "m6", table: "m6" } };
+  state = {
+    data: {},
+    load: false,
+    size: { chart: "m6", table: "m6" },
+    height: 160
+  };
 
   renderTable = data => {
     if (!data) {
       return <tr></tr>;
     }
+
     return data.StateData.map(
       ({ active, confirmed, deaths, recovered, state }) => {
         if (state === "Total") {
@@ -50,7 +56,7 @@ export class Table extends Component {
     if (this.state.load) {
       return (
         <div className="col s12 m5">
-          <Chart data={this.state.data} />
+          <Chart height={this.state.height} data={this.state.data} />
         </div>
       );
     }
@@ -61,7 +67,7 @@ export class Table extends Component {
         className={`col s12 ${this.state.size.chart} `}
         style={{ float: "right" }}
       >
-        <TimeView data={this.props.Querydata} />;
+        <TimeView height={this.state.height} data={this.props.Querydata} />;
       </div>
     );
   };

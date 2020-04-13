@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
+import { isMobile } from "react-device-detect";
 
 export class TimeChart extends Component {
   render() {
     const { labels, data, title, color } = this.props;
+
     const chartData = {
       labels: labels,
       datasets: [
@@ -18,20 +20,19 @@ export class TimeChart extends Component {
         }
       ]
     };
+    let height = 160;
+    if (isMobile) {
+      height = 280;
+    }
     return (
       <div>
         <div className="row ">
           <div className="col s12 m12 ">
             <Line
               data={chartData}
-              // height={250}
+              height={height}
               options={{
                 maintainAspectRatio: true,
-                onResize: (chart, size) => {
-                  chart.options.legend.display = size.height < 128;
-                  size.height = 250;
-                  chart.update();
-                },
                 title: {
                   display: true,
                   fontSize: 15,

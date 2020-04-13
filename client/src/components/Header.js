@@ -19,7 +19,7 @@ export class Header extends Component {
                   href="https://github.com/rishabhkanojiya?tab=repositories"
                   target="_blank"
                 >
-                  <i className="material-icons left">code</i>Github
+                  Github
                 </a>
               </li>
             </ul>

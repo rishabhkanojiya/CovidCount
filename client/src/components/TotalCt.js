@@ -16,21 +16,11 @@ export class TotalCt extends Component {
     return (
       <tbody>
         <tr>
-          <td>
-            <h5>{state}</h5>
-          </td>
-          <td className="blue lighten-5">
-            <h5>{confirmed}</h5>
-          </td>
-          <td className="orange lighten-5">
-            <h5>{active}</h5>
-          </td>
-          <td className="green lighten-5">
-            <h5>{recovered}</h5>
-          </td>
-          <td className="red lighten-5">
-            <h5>{deaths}</h5>
-          </td>
+          <td>{state}</td>
+          <td className="blue lighten-5">{confirmed}</td>
+          <td className="orange lighten-5">{active}</td>
+          <td className="green lighten-5">{recovered}</td>
+          <td className="red lighten-5">{deaths}</td>
         </tr>
       </tbody>
     );
@@ -41,22 +31,24 @@ export class TotalCt extends Component {
       <div>
         <div className="row">
           <div className="col s12 m6">
-            <h3>INDIA COVID-19 TRACKER</h3>
+            <h4>INDIA COVID-19 TRACKER</h4>
           </div>
           <div className="col s12 m12"></div>
         </div>
-        <table className="centered ">
-          <thead>
-            <tr>
-              <th></th>
-              <th>CONFIRMED</th>
-              <th>ACTIVE</th>
-              <th>RECOVERED</th>
-              <th>DEATHS</th>
-            </tr>
-          </thead>
-          {this.renderValue(this.props.data)}
-        </table>
+        <div className="row">
+          <table className="centered">
+            <thead>
+              <tr>
+                <th></th>
+                <th>CONFIRMED</th>
+                <th>ACTIVE</th>
+                <th>RECOVERED</th>
+                <th>DEATHS</th>
+              </tr>
+            </thead>
+            {this.renderValue(this.props.data)}
+          </table>
+        </div>
       </div>
     );
   }

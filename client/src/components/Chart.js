@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { HorizontalBar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
+import { isMobile } from "react-device-detect";
 
 export class Chart extends Component {
   render() {
@@ -27,12 +28,17 @@ export class Chart extends Component {
         }
       ]
     };
+    let height = 180;
+    if (isMobile) {
+      height = 280;
+    }
     return (
       <div>
         <div className="row">
           <div className="col s12 m12">
             <Doughnut
               data={chartData}
+              height={height}
               options={{
                 maintainAspectRatio: true,
                 title: {
@@ -45,8 +51,9 @@ export class Chart extends Component {
           </div>
           <div className="row">
             <div className="col s12 m12">
-              <HorizontalBar
+              <Bar
                 data={chartData}
+                height={height}
                 options={{
                   maintainAspectRatio: true,
                   title: {
