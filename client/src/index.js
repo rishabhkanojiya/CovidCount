@@ -6,6 +6,7 @@ import "materialize-css/dist/js/materialize.min.js";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
+console.log(process.env.PORT);
 const client = new ApolloClient({
   uri: `http://localhost:${process.env.PORT}/graphql`,
   credentials: "include",
