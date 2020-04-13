@@ -7,7 +7,8 @@
     "start": "node index.js ",
     "dev:client": "npm start --prefix client",
     "dev:server": "nodemon src/index.js",
-    "dev": "concurrently npm:dev:*"
+    "dev": "concurrently npm:dev:*",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
