@@ -1,5 +1,4 @@
 module.exports = {
-    urlData: process.env.urlData
-    urlState: process.env.urlState
-  };
-  
+  urlData: process.env.urlData,
+  urlState: process.env.urlState
+};
