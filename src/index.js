@@ -6,13 +6,13 @@ const schema = require("./schema/schema");
 const app = express();
 
 app.use(express.json());
-const corsOptions = {
-  origin: "http://localhost:3000",
-  credentials: true
-};
+// const corsOptions = {
+//   origin: "http://localhost:3000",
+//   credentials: true
+// };
 
-// app.use(cors());
-app.use(cors(corsOptions));
+app.use(cors());
+// app.use(cors(corsOptions));
 
 app.use(
   "/graphql",

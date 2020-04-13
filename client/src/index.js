@@ -8,7 +8,7 @@ import { ApolloProvider } from "react-apollo";
 
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql",
-  credentials: "include",
+  // credentials: "include",
   dataIdFromObject: o => o.id
 });
 
