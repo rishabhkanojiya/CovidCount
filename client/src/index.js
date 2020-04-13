@@ -8,7 +8,7 @@ import { ApolloProvider } from "react-apollo";
 
 const PORT = process.env.PORT || 5000;
 const client = new ApolloClient({
-  uri: `http://localhost:${PORT}/graphql`,
+  uri: `https://covidcount.herokuapp.com/graphql`,
   dataIdFromObject: o => o.id
 });
 
