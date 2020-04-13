@@ -35,7 +35,7 @@ export class TimeChart extends Component {
                 title: {
                   display: true,
                   fontSize: 15,
-                  text: title
+                  text: title.toUpperCase()
                 }
               }}
             />
