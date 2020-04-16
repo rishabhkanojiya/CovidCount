@@ -6,10 +6,9 @@ import "materialize-css/dist/js/materialize.min.js";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
-const PORT = process.env.PORT || 5000;
 const client = new ApolloClient({
   uri: `https://covidcount.herokuapp.com/graphql`,
-  dataIdFromObject: o => o.id
+  dataIdFromObject: (o) => o.id,
 });
 
 ReactDOM.render(

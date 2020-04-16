@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 import { isMobile } from "react-device-detect";
+import * as zoom from "chartjs-plugin-zoom";
 
 export class TimeChart extends Component {
   render() {
@@ -16,9 +17,9 @@ export class TimeChart extends Component {
           pointRadius: 0,
           borderColor: color,
           borderWidth: 2,
-          fill: false
-        }
-      ]
+          fill: false,
+        },
+      ],
     };
     let height = 160;
     if (isMobile) {
@@ -32,12 +33,20 @@ export class TimeChart extends Component {
               data={chartData}
               height={height}
               options={{
+                pan: {
+                  enabled: true,
+                  mode: "xy",
+                },
+                zoom: {
+                  enabled: true,
+                  mode: "xy",
+                },
                 maintainAspectRatio: true,
                 title: {
                   display: true,
                   fontSize: 15,
-                  text: title.toUpperCase()
-                }
+                  text: title.toUpperCase(),
+                },
               }}
             />
           </div>

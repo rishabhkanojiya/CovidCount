@@ -85,6 +85,7 @@ export class Table extends Component {
                 <th>DEATHS</th>
               </tr>
             </thead>
+
             <tbody>{this.renderTable(this.props.Querydata)}</tbody>
           </table>
         </div>
