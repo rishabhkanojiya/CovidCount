@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "apollo-boost": "^0.4.7",
     "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-zoom": "^0.7.5",
     "graphql-tag": "^2.10.3",
     "materialize-css": "^1.0.0",
